@@ -1,0 +1,22 @@
+server:
+   port: 4000
+spring:
+  application:
+    name: SpringBoot-Postgres-GCP-Demo
+  datasource:
+      url: jdbc:postgresql://localhost:2226/upm-dev
+      username: postgres
+      password: #password
+  cloud:
+    gcp:
+      project-id: # GCP projectId 
+      sql:
+        credentials:
+          location: # cloud sql credential location path
+        database-name: # cloud sql database name
+        instance-connection-name: # cloud sql instance connection name
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
