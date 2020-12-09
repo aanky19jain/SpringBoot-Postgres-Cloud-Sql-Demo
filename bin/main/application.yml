@@ -6,15 +6,15 @@ spring:
   datasource:
       url: jdbc:postgresql://localhost:2226/upm-dev
       username: postgres
-      password: #password
+      password: spannermigration
   cloud:
     gcp:
-      project-id: # GCP projectId 
+      project-id: mtech-commonsvc-pricepromo-np
       sql:
         credentials:
-          location: # cloud sql credential location path
-        database-name: # cloud sql database name
-        instance-connection-name: # cloud sql instance connection name
+          location: file:/Users/b008967/Downloads/mtech-commonsvc-pricepromo-np-1e7831499554.json
+        database-name: upm-dev
+        instance-connection-name: mtech-commonsvc-pricepromo-np:us-central1:price-upm
   jpa:
     show-sql: true
     properties:
